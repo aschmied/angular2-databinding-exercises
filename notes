@@ -5,3 +5,10 @@ View Encapsulation
   if you inspect your components you'll see they get an attribute like
   "_ngcontent-pax-1." Angular uses these to apply styles only to the
   appropriate components. This emulates "shadow DOM" behaviour.
+
+Data Binding
+
+{{ }} string interpolation
+<button [disabled]="expression that evaluates to type expected by disabled attribute"> property binding
+<button (click)="expression to be called when click even is fired"> event binding
+<input [(ngModel)]="bound model object"> two-way binding
