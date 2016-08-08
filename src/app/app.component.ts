@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { OtherComponent } from './other'
+import { AnotherComponent, OtherComponent } from './other';
 
 @Component({
   moduleId: module.id,
@@ -7,6 +7,7 @@ import { OtherComponent } from './other'
   template: `
     <h1>blah</h1>
     <app-other></app-other>
+    <app-another></app-another>
   `,
   styleUrls: ['app.component.css'],
   styles: [`
@@ -14,7 +15,7 @@ import { OtherComponent } from './other'
     color: red
   }
   `],
-  directives: [OtherComponent]
+  directives: [AnotherComponent, OtherComponent]
 })
 export class AppComponent {
   title = 'blah';
