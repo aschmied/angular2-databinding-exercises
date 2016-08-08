@@ -1,0 +1,2 @@
+# ng generate component without a barrel ComponentName
+ng g c --flat --inline-template --inline-style component-name # or -it -is
