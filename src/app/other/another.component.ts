@@ -4,11 +4,19 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'app-another',
   template: `
-    <p>
-      another Works!
-    </p>
+    <article>
+      <h1>Content</h1>
+      <ng-content></ng-content>
+    </article>
   `,
-  styles: []
+  styles: [`
+    article {
+      border: 1px solid black
+    }
+    h1 {
+      color: blue
+    }
+  `]
 })
 export class AnotherComponent {
 }

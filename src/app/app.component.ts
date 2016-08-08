@@ -7,7 +7,8 @@ import { AnotherComponent, OtherComponent } from './other';
   template: `
     <h1>blah</h1>
     <app-other></app-other>
-    <app-another></app-another>
+    <app-another><div><h1>first</h1> one</div></app-another>
+    <app-another><div>second one</div></app-another>
   `,
   styleUrls: ['app.component.css'],
   styles: [`
