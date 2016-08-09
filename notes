@@ -6,9 +6,28 @@ View Encapsulation
   "_ngcontent-pax-1." Angular uses these to apply styles only to the
   appropriate components. This emulates "shadow DOM" behaviour.
 
-Data Binding
+Data Binding Types
 
-{{ }} string interpolation
-<button [disabled]="expression that evaluates to type expected by disabled attribute"> property binding
-<button (click)="expression to be called when click even is fired"> event binding
-<input [(ngModel)]="bound model object"> two-way binding
+  {{ }} string interpolation
+  <button [disabled]="expression that evaluates to type expected by disabled attribute"> property binding
+  <button (click)="expression to be called when click even is fired"> event binding
+  <input [(ngModel)]="bound model object"> two-way binding
+
+What you can bind to
+
+  Native DOM properties:
+    <img [src]="...">
+    <img (click)="...">
+
+  Angular Directive properties:
+    <div [ngClass]="...">
+    <dig (ngSubmit)="...">
+
+  Component properties:
+    <my-component [initObj]="...">
+    <my-component (rndEvent)="...">
+
+Creating custom "bindpoints" in your own components
+
+  property binding: @Input() propertyName: string;
+  event binding: @Output() eventName: new EventEmitter();
