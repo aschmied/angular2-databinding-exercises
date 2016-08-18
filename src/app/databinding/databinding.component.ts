@@ -21,4 +21,8 @@ export class DatabindingComponent {
   drawWithRedBorder() {
     return true;
   }
+
+  onClick(msg: string) {
+    alert(msg);
+  }
 }
