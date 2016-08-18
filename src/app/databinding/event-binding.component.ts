@@ -5,8 +5,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   selector: 'app-event-binding',
   template: `
     <button (click)=onClick()>Go</button>
-  `,
-  styles: []
+  `
 })
 export class EventBindingComponent {
   @Output('tappp') clickEventEmitter = new EventEmitter<string>();

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DatabindingComponent } from './databinding';
 
 @Component({
   moduleId: module.id,
@@ -7,8 +6,7 @@ import { DatabindingComponent } from './databinding';
   template: `
     <app-databinding></app-databinding>
   `,
-  styleUrls: ['app.component.css'],
-  directives: [DatabindingComponent]
+  styleUrls: ['app.component.css']
 })
 export class AppComponent {
   title = 'blah';
