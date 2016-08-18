@@ -1,3 +1,9 @@
+NPM
+  npm outdated
+  npm update --save  # update subject to constraints
+  npm install -g npm-check-updates  # then...
+  ncu  # upate package.json
+
 # ng generate component without a barrel ComponentName
 ng g c --flat --inline-template --inline-style component-name # or -it -is
 
@@ -29,5 +35,5 @@ What you can bind to
 
 Creating custom "bindpoints" in your own components
 
-  property binding: @Input() propertyName: string;
+  property binding: import Input then @Input() propertyName: string;
   event binding: @Output() eventName: new EventEmitter();
