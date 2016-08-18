@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PropertyBindingComponent } from './property-binding.component';
+import { EventBindingComponent } from './event-binding.component';
 
 @Component({
   moduleId: module.id,
@@ -10,7 +11,10 @@ import { PropertyBindingComponent } from './property-binding.component';
       border: 1px solid red
     }
   `],
-  directives: [PropertyBindingComponent]
+  directives: [
+    PropertyBindingComponent,
+    EventBindingComponent
+  ]
 })
 export class DatabindingComponent {
   defaultValue = "default text";
