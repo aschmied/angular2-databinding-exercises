@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PropertyBindingComponent } from './property-binding.component';
 import { EventBindingComponent } from './event-binding.component';
+import { TwoWayBindingComponent } from './two-way-binding.component';
 
 @Component({
   moduleId: module.id,
@@ -13,7 +14,8 @@ import { EventBindingComponent } from './event-binding.component';
   `],
   directives: [
     PropertyBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    TwoWayBindingComponent,
   ]
 })
 export class DatabindingComponent {
