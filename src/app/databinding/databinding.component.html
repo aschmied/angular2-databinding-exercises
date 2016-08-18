@@ -4,3 +4,7 @@
 <input type="text" [value]="defaultValue"><br>
 <div [ngClass]="{ redBorder: drawWithRedBorder() }">testing property binding</div>
 <div [ngStyle]="{ color: 'green' }">more property binding</div>
+
+<h3>Custom Property Binding</h3>
+
+<app-property-binding [property]="42"></app-property-binding>
