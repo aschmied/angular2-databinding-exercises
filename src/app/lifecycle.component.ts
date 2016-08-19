@@ -1,6 +1,7 @@
 import {
     Component,
     Input,
+    ViewChild,
     OnInit,
     OnChanges,
     DoCheck,
@@ -16,7 +17,8 @@ import {
   template: `
     <ng-content></ng-content>
     <hr>
-    {{bindpoint}}
+    <p #bindpointP>{{bindpoint}}</p>
+    <p>{{bindpointP.textContent}}
   `,
   styles: []
 })
@@ -30,6 +32,7 @@ export class LifecycleComponent implements OnInit,
     OnDestroy {
 
   @Input() bindpoint = 1000;
+  @ViewChild('bindpointP') bindpointP: HTMLElement;
 
   constructor() { }
 
@@ -50,6 +53,7 @@ export class LifecycleComponent implements OnInit,
   }
   ngAfterViewInit() {
     this.log("ngAfterViewInit");
+    console.log(this.bindpointP);
   }
   ngAfterViewChecked() {
     this.log("ngAfterViewChecked");
