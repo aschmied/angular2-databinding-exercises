@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-root', // element selector. attribute selector is [sel] then e.g. <div sel> will be replaced
   template: `
     <app-lifecycle *ngIf="show" [bindpoint]="bindpointValue">
-      {{test}}
+      <p #boundContent>{{test}}</p>
     </app-lifecycle>
     <button (click)="show = !show">Toggle</button>
     <button (click)="test = 'changed value'">change text</button>
