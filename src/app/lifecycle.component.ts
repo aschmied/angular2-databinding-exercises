@@ -1,5 +1,6 @@
 import {
     Component,
+    Input,
     OnInit,
     OnChanges,
     DoCheck,
@@ -13,9 +14,9 @@ import {
   moduleId: module.id,
   selector: 'app-lifecycle',
   template: `
-    <p>
-      lifecycle Works!
-    </p>
+    <ng-content></ng-content>
+    <hr>
+    {{bindpoint}}
   `,
   styles: []
 })
@@ -27,6 +28,8 @@ export class LifecycleComponent implements OnInit,
     AfterViewInit,
     AfterViewChecked,
     OnDestroy {
+
+  @Input() bindpoint = 1000;
 
   constructor() { }
 
